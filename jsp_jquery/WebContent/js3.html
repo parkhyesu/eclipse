@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		
+		<script src = "http://code.jquery.com/jquery-latest.min.js"></script>
+		
+		<script >
+			
+			 $(document).ready(function(){
+			
+				 //addClass() : 클래스 속성 추가
+				 //removeClass() : 클래스 속성 제거
+				
+				 //<div class = ""> 이 속성 주는것.
+				 $("#addClass").addClass("addCla");
+				 $(".addCla").css("background", "#ff0000");
+				 
+				 $(".remCla").css("background", "#00ff00");
+				 $("#removeClass").removeClass("remCla");
+				 //.remCla 지웠으니까 이 문장 에러남.
+				 $(".remCla").css("background", "#00ff00");
+				 
+				 
+			}); 
+		</script>
+		
+	
+	</head>
+	
+	<body>
+	
+		<div id = "addClass"> addClass() 메서드</div>
+		<div id = "removeClass" class = "remCla"> removeClass() 메서드</div>
+	</body>
+</html>

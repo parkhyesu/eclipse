@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		
+		<script src = "http://code.jquery.com/jquery-latest.min.js"></script>
+		
+		<script >
+			
+			 $(document).ready(function(){
+				
+				 //p 태그가 총 3개인 상태에서 
+				 //each() : 배열
+				 //each 문에 함수 바로 때려넣음. 콜백함수
+				 //index : p 배열의 순서. item : p태그 객체
+				 $("p").each(function(index,item){
+					 //p태그 .text() 하면 p태그 안의 텍스트만 남는다.
+					 console.log($(item).text());
+					 
+					 if(index % 2 == 0){
+						 $(item).css("background", "#dfdfdf");
+					 }else{
+						 $(item).css("background", "#cccccc");
+					 }
+				 });
+				 
+			}); 
+		</script>
+		
+	
+	</head>
+	
+	<body>
+		<p>Hello javascript</p>
+		<p>Hello jQuery</p>
+		<p>Hello node.js</p>
+		
+	</body>
+</html>

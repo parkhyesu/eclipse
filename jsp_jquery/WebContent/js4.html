@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		
+		<script src = "http://code.jquery.com/jquery-latest.min.js"></script>
+		
+		<script >
+			
+			 $(document).ready(function(){
+				
+				 //attr() : 속성추가
+				 //attr() : 속성검사(2개 이상인 경우 첫번째 객체 이용)
+				 //removeAttr(속성) : 속성제거
+				 
+				 $("#attrMethod img").attr("src", "img/logo.png");
+				 //attr("src")에 쉼표 주고 이미지 지정 안하면 이미지가 가지고있는 value가 리턴. "img/logo.png" 이게 리턴됨.
+				 console.log("#attrMethod img src : " + $("#attrMethod img").attr("src"));
+				 
+				 $("#attrMethod img").removeAttr("src");
+				 //src 의 value 값까지 같이 날아가서 이미지 다 삭제됨.
+				 console.log("#attrMethod img src : " + $("#attrMethod img").attr("src"));
+			}); 
+		</script>
+		
+	
+	</head>
+	
+	<body>
+	
+		<div id = "attrMethod">
+			<img>
+			<br>
+			<img>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		
+		<style>
+			
+			#container{
+				display:grid;
+				
+				grid-template-areas:
+					"header"
+					"intro"
+					"map"
+					"recommend";
+			
+			}
+			
+			
+			@media (max-width:600px){
+				
+				#container{
+					
+					display:grid;
+					
+					grid-template-areas:
+						"header"
+						"intro  map"
+						"recommend";
+						
+					gird-template-rows:auto 1fr auto;
+					grid-template-columns:100%;
+				}
+			
+			
+			}
+			
+			#pageHeader{
+				grid-area:header;
+				background-color:black;
+				height:50px;
+				padding:5px;
+			}
+			#pageHeader a{
+				color:white;
+				text-decoration:none;
+				height:50px;
+				line-height:50px;
+				margin:20px;
+			}
+			
+			#intro{
+				grid-area:intro;
+			}
+			
+			#map{
+				grid-area:map;
+			}
+			
+			#recommend{
+				grid-are:recommend;
+			}
+			
+			#recomment img{
+				float:right;
+			}
+			
+			footer{
+				background:black;
+				color:white;
+				line-height:100px;
+				height:100px;
+				text-align:center;
+				font-size:1.5em;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<header id="pageHeader">
+				<a href="">카페 소개</a>
+				<a href="">오시는 길</a>
+				<a href="">이 달의 추천</a>
+			</header>
+			
+			<section id = "intro">
+				<h1> 카페 소개 </h1>
+				<div>
+					<img src = "img/coffee.jpg">
+					<div id="text">
+						<p>영업시간 : 오전 9시 ~ 밤 10시 </p>
+						<p> 휴무  : 매주 수요일 (수요일이 공휴일일 경우 수요일 영엽, 다음날 휴무)</p>
+					</div>
+				
+				</div>
+			
+			</section>
+			
+			<section id = "map">
+				<h1> 오시는 길 </h1>
+				<div>
+					<img src = "img/map.jpg">
+					<div id = "text">
+						<p> 서귀포시 안덕면 사계리 oooo - oooo</p>
+						<p>제주 올레 10코스 산방산 근처</p>
+					
+					</div>
+				
+				</div>
+				
+			</section>
+			
+			<section id = "recommend">
+				<h1> 이 달의 추천 </h1>
+				<div>
+					<h4>핸드 드립 아이스 커피</h4>
+					<ol>
+						<li>1인분 기준으로 서버에 각얼음 5조각(한조각의 20cc)넣고 추출을 시작한다.</li>
+						<li>평상시 보다 원두의 양은 2배 정도(20g)와 추출액은 얼음 포함해서 200cc 까지 내린다.</li>
+						<li>아이스 잔에 얼음 6~7개 섞어서 시원하게 마신다.</li>
+					</ol>
+					<img src = "img/ice.jpg">
+				</div>
+			
+			
+			</section>
+			
+		
+		</div>
+		<footer> my times with coffee </footer>
+		
+	</body>
+</html>

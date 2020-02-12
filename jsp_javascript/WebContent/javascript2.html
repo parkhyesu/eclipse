@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		
+		<script type ="text/javascript">
+			
+			window.onload = function(){
+				//어떤 이벤트가 도달했는지 확인하기 위한 함수.
+				function addHandler(e){
+					console.log("click");
+					console.log("thils : " + this);
+					 
+					//IE8 이전버전을 고려
+					var event = e || window.event;
+					for(var key in event){
+						console.log(key + " : " + event[key]);
+					}
+				};
+				
+				var objD = document.getElementById("objDiv");
+				objD.addEventListener("click", addHandler, false);
+				
+				var objP = document.getElementById("objPar");
+				objP.addEventListener("click", addHandler, false);
+			};
+		</script>
+		
+		<style>
+		
+			#objDiv{
+				width : 200px;
+				height:100px;
+				line-height:100px;
+				text-align:center;
+				font-size:1.2em;
+				background-color:#f00;
+				color:#fff;
+				font-weight:bolder;	
+			}
+			#objPar{
+				width : 200px;
+				height:100px;
+				line-height:100px;
+				text-align:center;
+				font-size:1.2em;
+				background-color:green;
+				color:#fff;
+				font-weight:bolder;	
+			}
+		
+		
+		
+		</style>
+		
+	</head>
+	
+	<body>
+	
+		<div id = "objDiv">
+			Object Division		
+		</div>
+		<div id = "objPar">
+			Object Paragraph		
+		</div>
+	
+	
+	</body>
+</html>

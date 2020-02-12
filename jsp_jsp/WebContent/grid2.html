@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+	
+		<style>
+			
+			#container{
+				display:grid;
+				max-width:1000px;
+				/* row 3개, columns 3개 총 9개 */
+				grid-template-rows:60px 1fr 60px;
+				grid-template-columns:20% 1fr 15%;
+				
+				/* 밑에 설정한 영역 이름으로. 이렇게 정렬하겠다. */
+				grid-template-areas:
+					"header header header"
+					"nav article ads"
+					"footer footer footer";
+				
+				grid-gap:10px;
+				/* 100vh : 모바일이든 뭐든 장치의 크기의 100%로 들어가게 */
+				height:100vh;
+				margin:0 auto;
+			}
+			
+			/* 미디어쿼리 주기 */
+			@media (max-width:600px){
+				
+				#container{
+					display:grid;
+					max-width:900px;
+					min-height:100vh;
+					
+					/* 컬럼은 하나에 로우가 5개 */
+					grid-template-rows:auto auto 1fr auto auto;
+					grid-template-columns:100%;
+					
+					/* 그래서 밑으로 5개 */
+					grid-template-areas:
+						"header"
+						"nav"
+						"article"
+						"ads"
+						"footer";
+					
+					margin:0 auto;
+				}	
+			}
+				
+			header, footer, article, nav, #siteAds{
+				background:gold;
+				padding:20px;
+			}
+			
+			/*grid-area : 영역에 대한 이름을 설정  */
+			#pageHeader{
+				grid-area:header;
+			}
+			#pageFooter{
+				grid-area:footer;
+			}
+			#mainArticle{
+				grid-area:article;
+			}
+			#mainNav{
+				grid-area:nav;
+			}
+			#siteAds{
+				grid-area:ads;
+			}		
+			
+		</style>
+	</head>
+	
+	<body>
+		<div id="container">
+			<header id="pageHeader">Header</header>
+			<article id="mainArticle">Article</article>
+			<nav id="mainNav">Nav</nav>
+			<div id="siteAds">Ads</div>
+			<footer id = "pageFooter">Footer</footer>
+		</div>
+	</body>
+</html>

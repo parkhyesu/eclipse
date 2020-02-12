@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	
+	<script type = "text/javascript">
+	
+		var Book ={
+			
+			name : "Nature of Code",
+			price : 30000,
+			author: "다니엘 쉬프만",
+			ISBN :  9788968481901,
+			page : 620
+		};
+		
+/* ============================================================= */		
+		
+		function Product(name, weight, price){
+			this.name = name;
+			this.weight = weight;
+			this.price = price;
+			this.calculate = function(weight){
+				return (weight/this.weight) * this.price + "원 입니다." 
+			};
+			
+		};
+		
+		var product = new Product("돼지삼겹살", "100", "1690");
+		
+		console.log(product.calculate(200));
+		console.log(product);
+	
+	</script>
+	
+	</head>
+	<body>
+	
+	</body>
+</html>

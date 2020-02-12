@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		
+		<!-- <script src = "http://code.jquery.com/jquery-latest.min.js"></script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+		<script >
+			
+			$(document).ready(function(){
+				
+				function eventHandler(event){
+					console.log("click");
+					console.log("this : " + this);
+					
+					for(var key in event){
+						console.log(key + " : " + event[key]);
+					}
+				};
+				
+				$("#objDiv").click(eventHandler);
+				$("#objpar").click(eventHandler);
+			}); 
+		
+		</script>
+		
+		
+	</head>
+	
+	<body>
+		<div id = "objDiv">Object Division</div>
+		<p id = "objpar">Object Parapraph</p>
+		
+	</body>
+</html>

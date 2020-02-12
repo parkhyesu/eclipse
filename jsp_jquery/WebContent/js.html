@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		
+		<script src = "http://code.jquery.com/jquery-latest.min.js"></script>
+		
+		<script >
+			
+			 $(document).ready(function(){
+				
+				 //html(), text()
+				 //html(), text() 둘다 태그 안의 텍스트를 가져오지만,
+				 //html() 은 뿌리는게 목적이 아니라 html 태그를 집어넣을수 있다는게 중요
+				 console.log("htmlMethod : " + $("#htmlMethod").html());
+				 $("#htmlMethod").html("<strong>new</strong>" + $("#textMethod").html());
+				 
+				 console.log("textMethod : " + $("#textmethod").text());
+				 $("#textMethod").text("new" + $("#textMethod").text());
+				 
+			}); 
+		</script>
+		
+	
+	</head>
+	
+	<body>
+	
+		<div id = "htmlMethod"> html() 메서드 </div>
+		<div id = "textMethod"> text() 메서드 </div>
+	</body>
+</html>
